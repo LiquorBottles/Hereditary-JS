@@ -90,3 +90,14 @@ class cars extends Skibidi{
 
 let car1 = new cars(10, "Speedy", "Luxury", new Date(), 101, "CameraMan");
 console.log(car1.toString());
+
+class WalterWhite extends Skibidi{
+    constructor(powerRating,skibi,toilet,date){
+        super(powerRating,skibi,toilet,date)
+    }
+    toString(){
+        return `${this._idSkibidi}: PowerRating ${this._poweRating} ${this._skibidi} ${this._toilet} ${this._date}`;
+    }
+}
+let iq = new WalterWhite(20,"Toilet","Skibidi",new Date())
+console.log(iq.toString())
