@@ -137,3 +137,7 @@ let soda1 = new Soda('Coca-Cola','Zero',500)
 console.log(soda1.toString())
 let soda2 = new Soda('Canada-Dry','Normal','500')
 console.log(soda2.toString())
+let soda3 = new Soda('Dr.Pepper',"Low",400);
+console.log(soda3.toString())
+let juice6 = new Juice("Watermelon","Low",500)
+console.log(juice6.toString())
