@@ -41,7 +41,7 @@ class Drink{
     }
 
     toString(){
-        return `Drink ${this._idDrink} - ${this._drink} - Ml: ${this._ml} - Price: ${this._price}`
+        return `Drink ${this._idDrink} - ${this._drink} - Ml: ${this._ml} - Price: ${this._price}$`
     }
 }
 let drink1 = new Drink('Vodka',300,7)
@@ -79,7 +79,7 @@ class Food{
     }
     // toString
     toString(){
-        return `Food ${this._idFood} -  ${this._food} - Price:  ${this._price}$`
+        return `Food ${this._idFood} -  ${this._food} - Price: ${this._price}$`
     }
 }
 let food1 = new Food('Pizz',10)
@@ -96,8 +96,33 @@ class Meal{
         this._drink = drink
     }
     toString(){
-        return `Meal ${this._idMeal} ${this._food} ${this._drink}`
+        return `Meal ${this._idMeal}\n${this._food}\n${this._drink}`
     }
 }
 let meal1 = new Meal(food1,drink1)
 console.log(meal1.toString())
+
+//Order Class
+class Order{
+    static contOrder = 0
+    constructor(){
+        this._idOrder = ++Order.contOrder
+        this._order = []
+    }
+    get idOrder (){
+        return this._idOrder
+    }
+    addOrder(order){
+        this._order.push(order)
+    }
+    showOrder(){
+        let orderDetails = ''
+        for(let order of this._order){
+            orderDetails += `${this._order}`
+        }
+        console.log(`IDOrder ${this._idOrder}${orderDetails}`)
+    }
+}
+let order1 = new Order()
+order1.addOrder(meal1)
+order1.showOrder()
